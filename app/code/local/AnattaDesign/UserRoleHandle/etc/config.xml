@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<AnattaDesign_UserRoleHandle>
+			<version>0.0.1.0</version>
+		</AnattaDesign_UserRoleHandle>
+	</modules>
+	<global>
+		<models>
+			<anattadesign_userrolehandle>
+				<class>AnattaDesign_UserRoleHandle_Model</class>
+			</anattadesign_userrolehandle>
+		</models>
+	</global>
+	<adminhtml>
+		<events>
+			<controller_action_layout_load_before>
+				<observers>
+					<userrolehandle>
+						<class>AnattaDesign_UserRoleHandle_Model_Observer</class>
+						<method>addUserRoleHandle</method>
+					</userrolehandle>
+				</observers>
+			</controller_action_layout_load_before>
+		</events>
+	</adminhtml>
+</config>
